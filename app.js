@@ -1,4 +1,4 @@
+let str1 = "hey!";
+let str2 = "Are you living here?";
 
-
-let hello = 'Hello everyone!';
-alert(hello);
+alert(str1 + str2);
