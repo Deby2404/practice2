@@ -1,10 +1,8 @@
-let max = 100;
-let num = 1;
-let count = 0;
+let i;
+let num = 0;
 
-while(num < 100) {
-  num = num*2;
-  count = count+1;
+for(i = 1; i < 11; i++){
+  num = num + i;
 }
 
-alert('２を掛けて' + max + 'を超えるのに必要だった回数は' + count + 'でした');
+alert('1から10まで足し算した結果は' + num + 'です');
