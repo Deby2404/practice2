@@ -1,11 +1,23 @@
 // 入力するプロンプト
 let user_hand = prompt('choose rock, scissors, or paper');
+// 違う文字が入力された場合のエラー文
+while ((user_hand != "rock") && (user_hand != "scissors") && (user_hand != "paper") && (user_hand != null)){
+  alert("type rock, scissors, or paper");
+  // 再度プロンプトの表示
+  user_hand = prompt('choose rock, scissors, or paper');
+}
 // じゃんけんの手をランダムに作成する関数
 let js_hand = getJShand();
 // ユーザーとJSを比べる関数を呼び出して、judgeに代入
 let  judge = winLose(user_hand, js_hand);
 // 結果表示
-alert("you choose " + user_hand + "and JS choose " + js_hand + " the winner is " + judge);
+if (user_hand != null){
+  alert("you choose " + user_hand + "and JS choose " + js_hand + " the winner is " + judge);
+// キャンセルボタンを押したときはアラートメッセージを表示
+}else{
+  alert("try again")
+}
+
 
 // ランダムでじゃんけんを作成する関数
 function getJShand(){
